@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/scrollbar.css">
+  <title>AniHome ● CatBoy</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-black">
+
+  <div class="container-fluid">
+    <!-- Links -->
+    <ul class="navbar-nav" >
+      <li class="nav-item">
+        <img src="src/icon.ico" width="40" height="40" alt="Icon">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="neko.html">Neko</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white active" href="catboy.html">CatBoy</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
+  <h1 class="text-white">AniHome</h1>
+  <p class="text-white">Die AniPicture Library</p>
+</header>
+
+
+<div class="text-white text-center mt-5">
+  <img src="src/cat2.gif" width="60"  alt="CtaBoy">
+  <h3>
+    CatBoy API
+  </h3>
+</div>
+
+<div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
+   <p class="p-4">Auf dieser Seite ist keine Eingabe erforderlich!</p>
+   <button id="rl" class="mb-4">
+      Nächstes Bild
+   </button>
+</div>
+
+<div class="card text-center ca mt-5 text-white">
+  <div class="card-header bg-dark">Artist: <a class="text-white" target="_blank" id="head" href=""></a></div>
+  <div class="card-body gray"><img src="src/default.png" id="imgresults" class="imgresult"></div>
+  <div class="card-footer bg-dark">
+    <a id="download" download href="src/default.png">
+      <button id="dlbtn" >
+        Download
+      </button>
+    </a>
+  </div>
+</div>
+
+
+<div class="d-flex zit">
+  <img src="src/cat3.png" width="300">
+  <h1 id="says">default</h1>
+</div>
+
+<footer class="w-100 bg-black ft ">
+  <div class="row text-white bg-black rounded-2 w-100">
+    <div class="col-md-4 pt-3">
+      <div class="text-center">
+        <img src="src/ic1.png" width="70" height="70" alt="IC1">
+        <h4>Anfragen</h4>
+        <p>Für Anfragen stehen wir für Sie gerne zur Verfügung unter: <a class="mail" href="mailto:management@thrisler.tk">management@thrisler.tk</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-md-4 pt-3">
+      <div class="text-center">
+        <img src="src/ic2.png" width="70" height="70" alt="IC2">
+        <h4>APIs</h4>
+        <p>Diese Website wird durch Betrieben von:</p>
+        <table class="table text-white">
+          <tr>
+            <td ><img src="src/neko.png" width="15" height="15"></td>
+            <td >Neko.best API</td>
+          </tr>
+          <tr class="text-center">
+            <td><img src="src/cat.png" width="15" height="15"></td>
+            <td>CatBoy API</td>
+          </tr>
+        </table>
+        <p class="fsk"> &copy; Thrisler 2023. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+    <div class="col-md-4 pt-3">
+      <div class="text-center">
+        <img src="src/ic3.png" width="70" height="70">
+        <h4>Weitere Links & Social Media</h4>
+        <p>Fole den Entwickler der Seite und finde mehr Links:</p>
+        <a href="https://thrisler.tk" target="_blank">
+          <button>
+            Mehr vom Entwickler
+          </button>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/catboy.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
