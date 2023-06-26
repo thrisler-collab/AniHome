@@ -105,6 +105,9 @@ nav{
     margin-right: 25%;
 }
 
+.ml50{
+    margin-left: 29%;
+}
 
 
 @media (max-width: 800px) {
