@@ -46,15 +46,20 @@ const episode = document.getElementById('episode');
 const english = document.getElementById('english');
 const synonyms = document.getElementById('synonyms');
 const treffsicherheit = document.getElementById('treffsicherheit');
-const imgurltxt = document.getElementById('urltxt').value;
+
 const bild = document.getElementById('imgresults');
 function apiurl() {
+    const imgurltxt = document.getElementById('urltxt').value;
+    var bnurl = `https://api.trace.moe/search?&url=${encodeURIComponent(imgurltxt)}`
+    console.log(imgurltxt)
     bild.src = imgurltxt;
-    fetch('https://api.trace.moe/search?anilistInfo&url=${encodeURIComponent(imgurltxt)}')
+    fetch("https://api.trace.moe/search?anilistInfo&url=" + imgurltxt, {
+        method: 'GET'
+        })
         .then((response) => response.json())
         .then((data) => {
             const results = data.result;
-            const de = data.result.anilist.title;
+            const de = data.result[0].anilist.title
             anime.innerHTML = de.romaji;
             animenative.innerHTML = de.native;
             adult.innerHTML = de.isAdult;
@@ -71,5 +76,30 @@ function apiurl() {
 };
 
 function apiimg(){
+ const finput = document.getElementById('formFile');
+ var bild1;
+ bild1 = URL.createObjectURL(finput.files[0]);
+ console.log(bild1);
+ bild.src = bild1;
 
+    fetch("https://api.trace.moe/search?anilistInfo&url=" + bild1, {
+        method: 'GET'
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            const results = data.result;
+            const de = data.result[0].anilist.title
+            anime.innerHTML = de.romaji;
+            animenative.innerHTML = de.native;
+            adult.innerHTML = de.isAdult;
+            episode.innerHTML = results.episode;
+            english.innerHTML = de.english;
+            synonyms.innerHTML = de.synonyms;
+
+            var prozent = results.similarity * 100;
+            var p1 = prozent.toFixed(2);
+            treffsicherheit.innerHTML = p1 + "%";
+            console.log(data);
+
+        })
 };
