@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/scrollbar.css">
-  <link rel="stylesheet" href="css/anigif.css">
+  <link rel="stylesheet" href="css/anisearch.css">
   <title>AniHome ● AniGif </title>
 </head>
 <body>
@@ -37,19 +37,26 @@
 </header>
 
 <div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
-  <h4 class="p-4">Bitte Wähle deine Kategorien</h4>
+  <h4 class="p-4">Datei Auswählen</h4>
 
   <div class="text-center justify-content-center">
-    <input type="radio" id="sfw" name="save_or_not" value="SFW" class="form-check-input">
-    <label id="lsfw">SFW</label> <br>
-    <input type="radio" id="nsfw" name="save_or_not" value="NSFW" class="form-check-input">
-    <label id="lnsfw">NSFW (18+)</label>
+    <input type="radio" id="imgUrl" name="save_or_not" value="SFW" class="form-check-input">
+    <label id="limgurl">Image URL</label> <br>
+    <input type="radio" id="imgUpload" name="save_or_not" value="NSFW" class="form-check-input">
+    <label id="limgupload">Image Upload</label>
   </div>
    <br>
-  <div class="text-center">
-    <select class="form-select ml50 sel gray" id="select-categorie-gif">
+  <div id="inputurl" class="ms-4 me-4">
+    <div class="input-group mb-3 ">
+      <span class="input-group-text bggray text-white" id="inputGroup-sizing-default">Image URL</span>
+      <input id="urltxt" type="text" class="form-control bggray1 text-white" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+  </div>
 
-    </select>
+  <div id="inputfile"  class="ms-4 me-4">
+    <div class="mb-3">
+      <input class="form-control bggray1 text-white" type="file" id="formFile">
+    </div>
   </div>
 
   <br>
@@ -59,15 +66,54 @@
 </div>
 
 <div class="card text-center ca mt-5 text-white">
-  <div class="card-header bg-dark">Artist: <a target="_blank" id="head" href=""></a></div>
-  <div class="card-body gray"><img src="src/default.png" width="70%" id="imgresults"></div>
-  <div class="card-footer bg-dark">
-    <a id="download" download href="src/default.png">
-      <button id="dlbtn" >
-        Download
-      </button>
-    </a>
+  <div class="card-header bg-dark">Ergebnis:</div>
+  <div class="card-body gray">
+    <img src="src/default.png" width="70%" id="imgresults">
+    <h4 class="text-center mt-4">Details:</h4>
+    <div class="row">
+      <div class="col-md-3 pt-3">
+      </div>
+      <div class="col-md-6 pt-3">
+
+        <table class="table text-white text-center">
+          <tr>
+            <td >Anime:</td>
+            <td id="anime">NONE</td>
+          </tr>
+          <tr>
+            <td>Anime (Native):</td>
+            <td id="animenative">NONE</td>
+          </tr>
+          <tr>
+             <td>18+:</td>
+             <td id="adult">NONE</td>
+          </tr>
+          <tr>
+            <td>Episode:</td>
+            <td id="episode">NONE</td>
+          </tr>
+          <tr>
+            <td>English:</td>
+            <td id="english">NONE</td>
+          </tr>
+          <tr>
+            <td>Synonyme: </td>
+            <td id="synonyms">NONE</td>
+          </tr>
+          <tr>
+            <td>Treffsicherheit:</td>
+            <td id="treffsicherheit">NONE</td>
+          </tr>
+
+        </table>
+
+      </div>
+      <div class="col-md-3 pt-3">
+      </div>
+    </div>
+
   </div>
+
 </div>
 
 <footer class="w-100 bg-black ft tt">
@@ -114,7 +160,7 @@
   </div>
 </footer>
 
-<script src="js/anigif.js"></script>
+<script src="js/anisearch.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
