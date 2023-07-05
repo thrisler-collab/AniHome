@@ -27,18 +27,29 @@
       <li class="nav-item">
         <a class="nav-link text-white" href="catboy.html">CatBoy</a>
       </li>
+      <li class="nav-item">
+          <a class="nav-link text-white d-flex" href="anisearch.html">AniSearch <p class="nav-link text-white beta">BETA</p></a>
+      </li>
     </ul>
   </div>
 
 </nav>
+
+<div class="pt-3 rounded-3 container mt-5 pb-2 gelb">
+  <div class="d-flex text-center">
+    <img src="src/att.png" width="30" height="30">
+    <p class="ps-3">Diese Funktion befindet sich aktuell noch in einer Beta Phase! </p>
+  </div>
+
+</div>
 <header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
   <h1 class="text-white">AniHome</h1>
   <p class="text-white">Die AniPicture Library</p>
 </header>
 
 <div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
-  <h4 class="p-4">Datei Auswählen</h4>
-
+  <h4 class="pt-3">Datei Auswählen</h4>
+  <p class="pb-3">Lade ein Screenshot von der Serie/Folge hoch</p>
   <div class="text-center justify-content-center">
     <input type="radio" id="imgUrl" name="save_or_not" value="SFW" class="form-check-input">
     <label id="limgurl">Image URL</label> <br>
@@ -47,7 +58,7 @@
   </div>
    <br>
   <div id="inputurl" class="ms-4 me-4">
-    <div class="input-group mb-3 ">
+    <div class="input-group">
       <span class="input-group-text bggray text-white" id="inputGroup-sizing-default">Image URL</span>
       <input id="urltxt" type="text" class="form-control bggray1 text-white" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
@@ -60,12 +71,14 @@
   </div>
 
   <br>
-  <button class="mt-4 mb-4" id="send">
+  <button class=" mb-2" id="send">
     Bestätigen
   </button>
+  <br>
+  <img src="src/loading.gif" id="loading" class="text-center justify-content-center mb-4" width="30" height="30">
 </div>
 
-<div class="card text-center ca mt-5 text-white">
+<div class="card text-center ca mt-5 text-white" id="res">
   <div class="card-header bg-dark">Ergebnis:</div>
   <div class="card-body gray">
     <img src="src/default.png" width="70%" id="imgresults">
@@ -81,6 +94,10 @@
             <td id="anime">NONE</td>
           </tr>
           <tr>
+            <td>Anime (English):</td>
+            <td id="english">NONE</td>
+          </tr>
+          <tr>
             <td>Anime (Native):</td>
             <td id="animenative">NONE</td>
           </tr>
@@ -91,10 +108,6 @@
           <tr>
             <td>Episode:</td>
             <td id="episode">NONE</td>
-          </tr>
-          <tr>
-            <td>English:</td>
-            <td id="english">NONE</td>
           </tr>
           <tr>
             <td>Synonyme: </td>

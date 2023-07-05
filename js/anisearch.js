@@ -8,7 +8,11 @@ const enterImg = document.getElementById('inputfile');
 
 const finish = document.getElementById('send');
 
-//https://soruly.github.io/trace.moe-api/#/docs
+const loadingimg = document.getElementById('loading');
+const ergebnis = document.getElementById('res')
+
+loadingimg.style.visibility = 'hidden'
+//ergebnis.style.visibility = 'hidden'
 
 r_imgurl.addEventListener('click', () =>{
     enterUrl.style.display='flex';
@@ -49,6 +53,8 @@ const treffsicherheit = document.getElementById('treffsicherheit');
 
 const bild = document.getElementById('imgresults');
 function apiurl() {
+    ergebnis.style.visibility = 'visible'
+    loadingimg.style.visibility = 'visible';
     const imgurltxt = document.getElementById('urltxt').value;
     var bnurl = `https://api.trace.moe/search?&url=${encodeURIComponent(imgurltxt)}`
     console.log(imgurltxt)
@@ -58,48 +64,79 @@ function apiurl() {
         })
         .then((response) => response.json())
         .then((data) => {
-            const results = data.result;
+            const results = data.result[0];
             const de = data.result[0].anilist.title
+            const de1 = data.result[0].anilist
             anime.innerHTML = de.romaji;
             animenative.innerHTML = de.native;
-            adult.innerHTML = de.isAdult;
+            adult.innerHTML = de1.isAdult;
             episode.innerHTML = results.episode;
             english.innerHTML = de.english;
-            synonyms.innerHTML = de.synonyms;
-
+            synonyms.innerHTML = de1.synonyms;
+            if (de1.isAdult === true){
+                adult.innerHTML = "Ja";
+            }
+            if (de1.isAdult === false){
+                adult.innerHTML = "Nein";
+            }
+            if (de.english === null){
+                english.innerHTML = "-"
+            }
             var prozent = results.similarity * 100;
             var p1 = prozent.toFixed(2);
             treffsicherheit.innerHTML = p1 + "%";
+            loadingimg.style.visibility = 'hidden';
             console.log(data);
-
         })
-};
+        .catch(error => {
+            loadingimg.style.visibility = 'hidden';
+            alert("Error:", error);
+        });
+}
 
 function apiimg(){
+    ergebnis.style.visibility= 'visible'
+    loadingimg.style.visibility = 'visible';
  const finput = document.getElementById('formFile');
- var bild1;
- bild1 = URL.createObjectURL(finput.files[0]);
- console.log(bild1);
- bild.src = bild1;
+    const file = finput.files[0];
 
-    fetch("https://api.trace.moe/search?anilistInfo&url=" + bild1, {
-        method: 'GET'
+    const formData = new FormData();
+    formData.append("image", file);
+
+    fetch("https://api.trace.moe/search?anilistInfo", {
+        method: "POST",
+        body: formData
     })
-        .then((response) => response.json())
-        .then((data) => {
-            const results = data.result;
+        .then(response => response.json())
+        .then(data => {
+            const results = data.result[0];
             const de = data.result[0].anilist.title
+            const de1 = data.result[0].anilist
             anime.innerHTML = de.romaji;
             animenative.innerHTML = de.native;
-            adult.innerHTML = de.isAdult;
+            adult.innerHTML = de1.isAdult;
             episode.innerHTML = results.episode;
             english.innerHTML = de.english;
-            synonyms.innerHTML = de.synonyms;
-
+            synonyms.innerHTML = de1.synonyms;
+            if (de1.isAdult === true){
+                adult.innerHTML = "Ja";
+            }
+            if (de1.isAdult === false){
+                adult.innerHTML = "Nein";
+            }
+            if (de.english === null){
+                english.innerHTML = "-"
+            }
             var prozent = results.similarity * 100;
             var p1 = prozent.toFixed(2);
             treffsicherheit.innerHTML = p1 + "%";
+            const imgre = URL.createObjectURL(finput.files[0]);
+            bild.src = imgre;
+            loadingimg.style.visibility = 'hidden';
             console.log(data);
-
         })
-};
+        .catch(error => {
+            alert("Fehler beim Hochladen des Bildes:", error);
+            loadingimg.style.visibility = 'hidden';
+        });
+}

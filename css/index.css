@@ -109,6 +109,14 @@ nav{
     margin-left: 29%;
 }
 
+.beta{
+    padding: 5px;
+    background-color: #dc3545;
+    border-radius: 3px;
+    font-size: 10px; !important;
+    margin-left: 3px;
+}
+
 
 @media (max-width: 800px) {
     footer{
