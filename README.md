@@ -18,3 +18,4 @@ Ausgabe von Infos zu einem Anime mittels upload eines Screenshots oder Bild URL 
 + Neue Alterboxen
 + Animation beim laden
 + Select Box neu gestaltet
++ Box Shadow zentriert
