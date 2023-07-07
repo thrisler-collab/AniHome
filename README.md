@@ -12,3 +12,9 @@ Ausgabe von Bilder der Kategorie
 Ausgabe von CatBoy Bilder
 
 Ausgabe von Infos zu einem Anime mittels upload eines Screenshots oder Bild URL (Beta)
+
+# New UI
++ Neuer Hintergrund
++ Neue Alterboxen
++ Animation beim laden
++ Select Box neu gestaltet
