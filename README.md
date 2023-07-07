@@ -1,3 +1,14 @@
 # AniHome
 WMC-Abschluss Projekt
-Eine Website welche man sich mithilfe der Fetch API Bilder anzeigen lassen kann. Eine mit Input Feld und eine ohne + Zitate
+
+# Features
+
+Ausgabe von Bilder der Kategorie
++ husbando
++ kitsune
++ neko
++ waifu
+
+Ausgabe von CatBoy Bilder
+
+Ausgabe von Infos zu einem Anime mittels upload eines Screenshots oder Bild URL (Beta)
