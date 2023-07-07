@@ -1,6 +1,6 @@
 
     html {
-        scrollbar-color: rgb(39, 39, 39) rgb(110, 110, 110);
+        scrollbar-color: rgba(39, 39, 39, 0.8) rgba(110, 110, 110, 0.8);
     }
 
     ::-webkit-scrollbar {

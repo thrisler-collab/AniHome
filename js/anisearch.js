@@ -11,6 +11,14 @@ const finish = document.getElementById('send');
 const loadingimg = document.getElementById('loading');
 const ergebnis = document.getElementById('res')
 
+const errormsg = document.getElementById('errorbox');
+const errbtn = document.getElementById('okbtn');
+
+errbtn.addEventListener('click', () => {
+    errormsg.style.visibility = 'hidden';
+});
+
+errormsg.style.visibility = 'hidden'
 loadingimg.style.visibility = 'hidden'
 //ergebnis.style.visibility = 'hidden'
 
@@ -90,7 +98,7 @@ function apiurl() {
         })
         .catch(error => {
             loadingimg.style.visibility = 'hidden';
-            alert("Error:", error);
+            errormsg.style.visibility = 'visible';
         });
 }
 
@@ -136,7 +144,7 @@ function apiimg(){
             console.log(data);
         })
         .catch(error => {
-            alert("Fehler beim Hochladen des Bildes:", error);
             loadingimg.style.visibility = 'hidden';
+            errormsg.style.visibility = 'visible';
         });
 }

@@ -3,7 +3,8 @@ html{
 }
 
 body{
-    background-color: #2f2f2f;
+    background-color: rgba(47, 47, 47, 0.8);
+    z-index: -1;
 }
 
 .b1{
@@ -17,8 +18,14 @@ body{
 }
 
 .ft{
-    box-shadow: -10px -10px 5px black;
+    box-shadow: 1px -10px 5px black;
 }
+
+.rad{
+    border-radius: 10px;
+}
+
+
 
 button {
     border-radius: .25rem;
@@ -78,15 +85,24 @@ footer{
 }
 
 nav{
-    box-shadow: 10px 20px 15px black;
+    box-shadow: 1px 6px 15px black;
 }
 
 .f{
     margin-left: 37%;
 }
 
-.sel{
-    width: 43%;
+#backgr{
+    height: 100%;
+    background: RGB(28, 28, 28);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -2;
+    width: 100%;
+    user-select: none;
 }
 
 .ca{

@@ -16,3 +16,6 @@ input[type='radio']
     background-color: #dc9d00 !important;
 }
 
+#okbtn{
+  cursor: default;
+}

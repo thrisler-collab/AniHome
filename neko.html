@@ -33,6 +33,11 @@
   </div>
 
 </nav>
+
+<div>
+   <img src="src/bg4.png" id="backgr">
+</div>
+
 <header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
   <h1 class="text-white">AniHome</h1>
   <p class="text-white">Die AniPicture Library</p>
@@ -45,7 +50,7 @@
 
 <div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
   <h4 class="p-4">Wähle deine Kategorie</h4>
-  <select class="gray text-white rounded-2 sel" id="select-categorie">
+  <select class="gray text-white rounded-2 sel form-select ms-5 w-75" id="select-categorie">
     <option>Auswahl</option>
     <option>husbando</option>
     <option>kitsune</option>
@@ -56,6 +61,8 @@
   <button class="mt-4 mb-4" id="send">
     Bestätigen
   </button>
+  <br>
+  <img src="src/loading.gif" id="loading" class="text-center justify-content-center mb-4" width="30" height="30">
 </div>
 
 <div class="card text-center ca mt-5 text-white">
@@ -94,8 +101,12 @@
             <td><img src="src/cat.png" width="15" height="15"></td>
             <td>CatBoy API</td>
           </tr>
+          <tr class="text-center">
+            <td><img src="src/tmapi.png" width="15" height="15"></td>
+            <td>Trace Moe API</td>
+          </tr>
         </table>
-        <p class="fsk"> &copy; Thrisler 2023. Alle Rechte vorbehalten.</p>
+        <p class="fsk"> &copy; Thrisler 2023. Alle Rechte vorbehalten. Version 1.1</p>
       </div>
     </div>
     <div class="col-md-4 pt-3">
