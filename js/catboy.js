@@ -1,4 +1,6 @@
+const load = document.getElementById('loading');
 
+load.style.visibility = 'hidden';
 loadcatboy();
 document.querySelector('#rl').addEventListener(('click'), () => {
   loadcatboy();
@@ -7,6 +9,7 @@ function loadcatboy(){
     fetch('https://api.catboys.com/img')
         .then((response) => response.json())
         .then((data) => {
+            load.style.visibility = 'visible';
             console.log(data);
             document.querySelector('#head').innerHTML = data.artist;
             document.querySelector('#head').href = data.artist_url;
@@ -18,6 +21,7 @@ function loadcatboy(){
                 document.querySelector('#head').href = "";
                 document.querySelector('#head').target = "";
             }
+            load.style.visibility = 'hidden';
         })
 
     fetch('https://api.catboys.com/catboy')
@@ -25,6 +29,8 @@ function loadcatboy(){
         .then((data) => {
             console.log(data);
             document.querySelector('#says').innerHTML = data.response;
+            load.style.visibility = 'visible';
+            console.log("test")
         })
 
 

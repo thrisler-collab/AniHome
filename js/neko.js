@@ -1,4 +1,7 @@
 var categorie = document.querySelector('#select-categorie').value;
+const load = document.getElementById('loading');
+
+load.style.visibility = 'hidden';
 document.querySelector('#dlbtn').disabled = true;
 if (categorie === "Auswahl"){
     console.log("test")
@@ -13,6 +16,7 @@ document.querySelector('#select-categorie').addEventListener('change', () => {
     }
 });
 document.querySelector('#send').addEventListener('click', () => {
+    load.style.visibility = 'visible';
     document.querySelector('#dlbtn').disabled = false;
     const selected = document.querySelector('#select-categorie').value;
         fetch('https://nekos.best/api/v2/' + selected)
@@ -25,5 +29,6 @@ document.querySelector('#send').addEventListener('click', () => {
                 document.querySelector('#head').href = results.artist_href;
                 document.querySelector('#imgresults').src = results.url;
                 document.querySelector('#download').href= results.url;
+                load.style.visibility = 'hidden';
             })
 });

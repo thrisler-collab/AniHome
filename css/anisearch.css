@@ -1,0 +1,21 @@
+input[type='radio']
+{
+    transform: scale(1.3);
+    margin-right: 5px;
+}
+
+.bggray{
+    background-color: #717171;
+}
+
+.bggray1{
+    background-color: #4d4d4d !important;
+}
+
+.gelb{
+    background-color: #dc9d00 !important;
+}
+
+#okbtn{
+  cursor: default;
+}
