@@ -64,7 +64,11 @@ footer{
 }
 
 .tt{
-    margin-top: 80px !important;
+
+}
+
+.bs{
+    box-shadow: 1px 10px 5px #430000;
 }
 
 .bp{
@@ -92,16 +96,23 @@ nav{
     margin-left: 37%;
 }
 
+.langu{
+    z-index: 15;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+
+}
+
 #backgr{
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     background: RGB(28, 28, 28);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
     z-index: -2;
-    width: 100%;
     user-select: none;
 }
 
@@ -135,6 +146,12 @@ nav{
 
 
 @media (max-width: 800px) {
+    #backgr{
+        width: 100% ;
+    }
+    .vbn{
+        width: 100% ;
+    }
     footer{
         position: relative;
 
@@ -157,6 +174,9 @@ nav{
     }
 
     .ter{
-        margin-left: 3%;
+        margin-left: 0;
+    }
+    .bnm{
+        padding-right: 0px !important;
     }
 }

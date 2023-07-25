@@ -43,18 +43,18 @@
 <div class="pt-3 rounded-3 container mt-5 pb-2 gelb">
   <div class="d-flex text-center">
     <img src="src/att.png" width="30" height="30">
-    <p class="ps-3">Diese Funktion befindet sich aktuell noch in einer Beta Phase! </p>
+    <p class="ps-3" id="10">Diese Funktion befindet sich aktuell noch in einer Beta Phase! </p>
   </div>
 
 </div>
 <header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
   <h1 class="text-white">AniHome</h1>
-  <p class="text-white">Die AniPicture Library</p>
+  <p class="text-white" id="11">Die AniPicture Library</p>
 </header>
 
 <div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
-  <h4 class="pt-3">Datei Auswählen</h4>
-  <p class="pb-3">Lade ein Screenshot von der Serie/Folge hoch</p>
+  <h4 class="pt-3" id="12">Datei Auswählen</h4>
+  <p class="pb-3" id="13">Lade ein Screenshot von der Serie/Folge hoch</p>
   <div class="text-center justify-content-center">
     <input type="radio" id="imgUrl" name="save_or_not" value="SFW" class="form-check-input">
     <label id="limgurl">Image URL</label> <br>
@@ -84,8 +84,11 @@
 </div>
 
 <div class="text-center d-flex justify-content-center" id="errorbox">
-  <div class="alert alert-danger alert-dismissible w-25 mt-3 text-center">
-    <strong>Fehler!</strong> Bei der Übermittlung ist ein Fehler aufgetreten
+  <div class="alert alert-danger alert-dismissible w-25 mt-3 text-center" id="14">
+    <i class="fa-regular fa-circle-xmark" style="color: #ff0000;"></i>
+    <strong>Fehler!</strong>
+    <br>
+    Bei der Übermittlung ist ein Fehler aufgetreten
     <div class="d-flex justify-content-center mt-2">
       <p id="okbtn" class="p-2 bg-danger rad w-25">OK</p>
     </div>
@@ -94,7 +97,7 @@
 
 
 <div class="card text-center ca mt-4 text-white" id="res">
-  <div class="card-header bg-dark">Ergebnis:</div>
+  <div class="card-header bg-dark" id="15">Ergebnis:</div>
   <div class="card-body gray">
     <img src="src/default.png" width="70%" id="imgresults">
     <h4 class="text-center mt-4">Details:</h4>
@@ -125,11 +128,11 @@
             <td id="episode">NONE</td>
           </tr>
           <tr>
-            <td>Synonyme: </td>
+            <td id="16">Synonyme: </td>
             <td id="synonyms">NONE</td>
           </tr>
           <tr>
-            <td>Treffsicherheit:</td>
+            <td id="17">Treffsicherheit:</td>
             <td id="treffsicherheit">NONE</td>
           </tr>
 
@@ -144,13 +147,14 @@
 
 </div>
 
-<footer class="w-100 bg-black ft tt">
+<footer class="w-100 bg-black ft tt mt-5">
   <div class="row text-white bg-black rounded-2 w-100">
     <div class="col-md-4 pt-3">
       <div class="text-center">
         <img src="src/ic1.png" width="70" height="70" alt="IC1">
-        <h4>Anfragen</h4>
-        <p>Für Anfragen stehen wir für Sie gerne zur Verfügung unter: <a class="mail" href="mailto:management@thrisler.tk">management@thrisler.tk</a>
+        <h4 id="001">Anfragen</h4>
+        <p id="002">Für Anfragen stehen wir für Sie gerne zur Verfügung unter: <a class="mail"
+                                                                                  href="mailto:management@thrisler.tk">management@thrisler.tk</a>
         </p>
       </div>
     </div>
@@ -158,11 +162,11 @@
       <div class="text-center">
         <img src="src/ic2.png" width="70" height="70" alt="IC2">
         <h4>APIs</h4>
-        <p>Diese Website wird durch Betrieben von:</p>
+        <p id="003">Diese Website wird Betrieben von:</p>
         <table class="table text-white">
           <tr>
-            <td ><img src="src/neko.png" width="15" height="15"></td>
-            <td >Neko.best API</td>
+            <td><img src="src/neko.png" width="15" height="15"></td>
+            <td>Neko.best API</td>
           </tr>
           <tr class="text-center">
             <td><img src="src/cat.png" width="15" height="15"></td>
@@ -173,16 +177,16 @@
             <td>Trace Moe API</td>
           </tr>
         </table>
-        <p class="fsk"> &copy; Thrisler 2023. Alle Rechte vorbehalten. Version 1.1</p>
+        <p class="fsk" id="004"> &copy; Thrisler 2023. Alle Rechte vorbehalten. Version 1.1</p>
       </div>
     </div>
     <div class="col-md-4 pt-3">
       <div class="text-center">
         <img src="src/ic3.png" width="70" height="70">
-        <h4>Weitere Links & Social Media</h4>
-        <p>Fole den Entwickler der Seite und finde mehr Links:</p>
+        <h4 id="005">Weitere Links & Social Media</h4>
+        <p id="006">Folge den Entwickler der Seite und finde mehr Links:</p>
         <a href="https://thrisler.tk" target="_blank">
-          <button>
+          <button id="007">
             Mehr vom Entwickler
           </button>
         </a>
