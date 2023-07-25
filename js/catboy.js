@@ -1,3 +1,12 @@
+//window.history.replaceState({}, document.title, '/');
+var spr = navigator.language
+if (!spr === 'de-DE') {
+    en()
+}
+window.addEventListener("resize", (event) => {
+    sic();
+});
+
 const load = document.getElementById('loading');
 
 load.style.visibility = 'hidden';
@@ -36,3 +45,28 @@ function loadcatboy(){
 
 
 }
+
+
+function en(){
+    document.getElementById("20").innerHTML = "Your AniPicture Library";
+    document.getElementById("21").innerHTML = "No input is required on this page!"
+    document.getElementById("rl").innerHTML = "Next Image"
+
+    document.getElementById("001").innerHTML = "Request"
+    document.getElementById("002").innerHTML = "For enquiries we are at your disposal under:"
+    document.getElementById("003").innerHTML = "This website is operated by:"
+    document.getElementById("004").innerHTML = "&copy; Thrisler 2023. All rights reserved. Version 1.1"
+    document.getElementById("005"). innerHTML = "More Links & Social Media"
+    document.getElementById("006").innerHTML = "Follow the developer of the site and find more links:"
+    document.getElementById("007").innerHTML = "More from the developer"
+}
+function sic(){
+    if (window.innerWidth < 800){
+        document.getElementById("backgr").src = "src/m3.jpg"
+        console.log("zugasd")
+    }
+    if (window.innerWidth > 800){
+        document.getElementById("backgr").src = "src/bg3.png"
+    }
+}
+

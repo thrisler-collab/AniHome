@@ -1,3 +1,13 @@
+//window.history.replaceState({}, document.title, '/');
+var spr = navigator.language
+if (!spr === 'de-DE') {
+    en()
+}
+
+sic()
+window.addEventListener("resize", (event) => {
+    sic();
+});
 const r_imgurl = document.getElementById('imgUrl');
 const r_imgupload = document.getElementById('imgUpload');
 const l_imgurl = document.getElementById('limgurl');
@@ -147,4 +157,35 @@ function apiimg(){
             loadingimg.style.visibility = 'hidden';
             errormsg.style.visibility = 'visible';
         });
+}
+
+function en(){
+    document.getElementById("10").innerHTML = "This function is currently still in a beta phase!"
+    document.getElementById("11").innerHTML = "Your AniPicture Library"
+    document.getElementById("12").innerHTML = "Select file";
+    document.getElementById("13").innerHTML = "Upload a screenshot of the series/episode";
+    document.getElementById("send").innerHTML = "Confirm";
+    document.getElementById("14").innerHTML = "<i class=\"fa-regular fa-circle-xmark\" style=\"color: #ff0000;\"></i> <strong>Error!</strong> <br> An error occurred during transmission"
+    document.getElementById("15").innerHTML = "Result:"
+    document.getElementById("16").innerHTML = "Synonyms:"
+    document.getElementById("17").innerHTML = "Accuracy:"
+
+
+    document.getElementById("001").innerHTML = "Request"
+    document.getElementById("002").innerHTML = "For enquiries we are at your disposal under:"
+    document.getElementById("003").innerHTML = "This website is operated by:"
+    document.getElementById("004").innerHTML = "&copy; Thrisler 2023. All rights reserved. Version 1.1"
+    document.getElementById("005"). innerHTML = "More Links & Social Media"
+    document.getElementById("006").innerHTML = "Follow the developer of the site and find more links:"
+    document.getElementById("007").innerHTML = "More from the developer"
+}
+
+function sic(){
+    if (window.innerWidth < 800){
+        document.getElementById("backgr").src = "src/m2.jpg"
+        console.log("zugasd")
+    }
+    if (window.innerWidth > 800){
+        document.getElementById("backgr").src = "src/bg2.png"
+    }
 }

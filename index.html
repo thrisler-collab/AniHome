@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/scrollbar.css">
+    <link rel="manifest" href="json/manifest.json">
+    <meta name="theme-color" content="#b80606">
+    <link rel="apple-touch-icon" href="Licon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniHome ● Home</title>
 </head>
 <body>
@@ -39,36 +44,46 @@
 </nav>
 <header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
     <h1 class="text-white">AniHome</h1>
-    <p class="text-white">Die AniPicture Library</p>
+    <p class="text-white" id="headertext">Die AniPicture Library</p>
 </header>
-
-<div class="text-center bg-dark pt-3 rounded-3 container mt-4 pb-2 text-white tt">
-    <h3>Was wir dir bieten</h3>
-    <p>Wir bieten dir vielen Anime Content, der dir sicher gefallen wird. Unter den diversen Kategorien findest auch du
+<div class="alert alert-info langu mt-1" id="info">
+    <i class="fa-solid fa-circle-info" style="color: #005eff;"></i>
+    <strong>Not supported Language</strong>
+    <br>
+    <p id="lan" class="text-black"></p>
+    <div class="d-flex justify-content-center mt-2">
+        <p id="okbtn" class="p-2 bg-info rad w-25">OK</p>
+    </div>
+</div>
+<div class="text-center bg-dark pt-3 rounded-3 container mt-1 pb-2 text-white bs">
+    <h3 id="bieten">Was wir dir bieten</h3>
+    <p id="c1">Wir bieten dir vielen Anime Content, der dir sicher gefallen wird. Unter den diversen Kategorien findest auch du
         das passende.</p>
-    <p> Wähle dir ganz einfach eine aus und lass dich überraschen. Ob für Inspiration für dein neues Projekt oder
+    <p id="c2"> Wähle dir ganz einfach eine aus und lass dich überraschen. Ob für Inspiration für dein neues Projekt oder
         Content. Wir erleichtern dir die Suche nach dem passendem Bild.</p>
 </div>
 
-<div class="text-center bg-dark pt-3 rounded-3 container mt-4 pb2 text-white pb-3">
+
+
+<div class="text-center bg-dark pt-3 rounded-3 container mt-4 pb2 text-white pb-3 bs">
     <div class="text-center d-flex justify-content-center ">
         <img src="src/att.png" width="40" height="40" class="p-2">
-        <h3>Beachte bitte:</h3>
+        <h3 id="beachte">Beachte bitte:</h3>
 
     </div>
-    <p>Das Urheberrecht liegt immer noch bei den Künstlern selbst bevor du sie erneut veröffentlichst bzw. verwendest
+    <p id="c3">Das Urheberrecht liegt immer noch bei den Künstlern selbst bevor du sie erneut veröffentlichst bzw. verwendest
         versichere dir das du die Rechte dafür besitzt!</p>
 </div>
 
 <div class="text-center justify-content-center d-flex pt-5">
     <img src="src/fire.gif" width="35" height="35" alt="Fire">
-    <h2 class="text-center text-white">Wähle aus um fortzufahren:</h2>
+    <h2 class="text-center text-white" id="wahl">Wähle aus um fortzufahren:</h2>
     <img src="src/fire.gif" width="35" height="35" alt="Fire">
 </div>
 
 <div class="text-center d-block">
     <a href="neko.html">
-        <button class="mb-2">
+        <button class="mb-2" id="b1">
             [ Neko und Co. ]
         </button>
     </a>
@@ -89,25 +104,25 @@
 </div>
 
 
-<div class="mt-5 text-white text-center">
-    <p class="mb-2">Für die die manche Kategorien nicht kennen eine kurze Erklärung</p>
+<div class="mt-5 text-white text-center vbn">
+    <p class="mb-2" id="42">Für die die manche Kategorien nicht kennen eine kurze Erklärung</p>
     <div class="ter">
-        <table class="table text-white text-center justify-content-center">
+        <table class="table text-white text-center justify-content-center vbn">
             <tr>
-                <th>Kategorie</th>
-                <th>Beschreibung</th>
-                <th>Kann NSFW Content enthalten</th>
+                <th id="43">Kategorie</th>
+                <th id="44">Beschreibung</th>
+                <th class="bnm" id="45">Kann NSFW Content enthalten</th>
             </tr>
             <tr>
                 <td>Husbando</td>
-                <td>In der Anime-Szene wird der Begriff "Husbando" verwendet, um einen männlichen Charakter zu
+                <td id="46">In der Anime-Szene wird der Begriff "Husbando" verwendet, um einen männlichen Charakter zu
                     bezeichnen, den eine Person bewundert, verehrt oder als idealen Partner betrachtet.
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <td>Kitsune</td>
-                <td>In der Anime-Szene steht "Kitsune" für einen Fuchs und bezieht sich auf die mythologische Figur des
+                <td id="47">In der Anime-Szene steht "Kitsune" für einen Fuchs und bezieht sich auf die mythologische Figur des
                     Fuchses in der japanischen Folklore. Kitsune sind oft als intelligente und magische Wesen
                     dargestellt, die menschliche Gestalt annehmen können.
                 </td>
@@ -115,7 +130,7 @@
             </tr>
             <tr>
                 <td>Neko</td>
-                <td>
+                <td id="48">
                     In der Anime-Szene steht "Neko" für eine Katze und bezieht sich auf Charaktere, die katzenähnliche
                     Merkmale oder Eigenschaften aufweisen. Dies kann sich auf physische Merkmale wie Katzenohren und
                     einen Katzenschwanz beziehen, aber auch auf Verhaltensweisen oder Persönlichkeitsmerkmale, die mit
@@ -125,14 +140,14 @@
             </tr>
             <tr>
                 <td>Waifu</td>
-                <td>In der Anime-Szene wird der Begriff "Waifu" verwendet, um einen weiblichen Charakter zu beschreiben,
+                <td id="49">In der Anime-Szene wird der Begriff "Waifu" verwendet, um einen weiblichen Charakter zu beschreiben,
                     den eine Person bewundert, verehrt oder als idealen Partner betrachtet.
                 </td>
                 <td><i class="fa-solid fa-check" style="color: #ffffff;"></i></td>
             </tr>
             <tr>
                 <td>Catboy</td>
-                <td>In der Anime-Szene steht "CatBoy" für einen männlichen Charakter, der katzenähnliche Merkmale oder
+                <td id="50">In der Anime-Szene steht "CatBoy" für einen männlichen Charakter, der katzenähnliche Merkmale oder
                     Eigenschaften aufweist, ähnlich wie bei einem Neko, jedoch mit einer männlichen Ausprägung.
                 </td>
                 <td></td>
@@ -142,13 +157,13 @@
 
 </div>
 
-<footer class="w-100 bg-black ft tt">
+<footer class="w-100 bg-black ft tt mt-5">
     <div class="row text-white bg-black rounded-2 w-100">
         <div class="col-md-4 pt-3">
             <div class="text-center">
                 <img src="src/ic1.png" width="70" height="70" alt="IC1">
-                <h4>Anfragen</h4>
-                <p>Für Anfragen stehen wir für Sie gerne zur Verfügung unter: <a class="mail"
+                <h4 id="001">Anfragen</h4>
+                <p id="002">Für Anfragen stehen wir für Sie gerne zur Verfügung unter: <a class="mail"
                                                                                  href="mailto:management@thrisler.tk">management@thrisler.tk</a>
                 </p>
             </div>
@@ -157,7 +172,7 @@
             <div class="text-center">
                 <img src="src/ic2.png" width="70" height="70" alt="IC2">
                 <h4>APIs</h4>
-                <p>Diese Website wird durch Betrieben von:</p>
+                <p id="003">Diese Website wird Betrieben von:</p>
                 <table class="table text-white">
                     <tr>
                         <td><img src="src/neko.png" width="15" height="15"></td>
@@ -172,16 +187,16 @@
                         <td>Trace Moe API</td>
                     </tr>
                 </table>
-                <p class="fsk"> &copy; Thrisler 2023. Alle Rechte vorbehalten. Version 1.1</p>
+                <p class="fsk" id="004"> &copy; Thrisler 2023. Alle Rechte vorbehalten. Version 1.1</p>
             </div>
         </div>
         <div class="col-md-4 pt-3">
             <div class="text-center">
                 <img src="src/ic3.png" width="70" height="70">
-                <h4>Weitere Links & Social Media</h4>
-                <p>Fole den Entwickler der Seite und finde mehr Links:</p>
+                <h4 id="005">Weitere Links & Social Media</h4>
+                <p id="006">Folge den Entwickler der Seite und finde mehr Links:</p>
                 <a href="https://thrisler.tk" target="_blank">
-                    <button>
+                    <button id="007">
                         Mehr vom Entwickler
                     </button>
                 </a>
@@ -191,6 +206,7 @@
     </div>
 </footer>
 
+<script src="index.js"></script>
 <script src="https://kit.fontawesome.com/4021e89746.js" crossorigin="anonymous"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>

@@ -1,0 +1,21 @@
+{
+  "name": "AniHome",
+  "short_name": "AniHome",
+  "display": "standalone",
+  "start_url": ".",
+  "background_color": "#f54542",
+  "theme_color": "#b80606",
+  "icons": [
+    {
+      "src": "Licon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },{
+      "src": "i512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
