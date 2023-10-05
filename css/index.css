@@ -144,6 +144,14 @@ nav{
     margin-left: 3px;
 }
 
+.beta1{
+    padding: 5px;
+    background-color: #61232a;
+    border-radius: 3px;
+    font-size: 10px !important;
+    margin-left: 3px;
+}
+
 
 @media (max-width: 800px) {
     #backgr{

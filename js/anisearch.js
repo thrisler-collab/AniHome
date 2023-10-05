@@ -1,4 +1,4 @@
-//window.history.replaceState({}, document.title, '/');
+window.history.replaceState({}, document.title, '/');
 var spr = navigator.language
 if (!spr === 'de-DE') {
     en()
@@ -60,6 +60,23 @@ finish.addEventListener('click', () => {
        apiimg();
     }
 });
+
+const fullTitle = "AniFind"; // Der vollständige Titel
+let currentTitle = "AniHome ●"; // Der aktuelle Titel, der sich schrittweise ergänzt
+let titleIndex = 0; // Der Index des nächsten Buchstabens, der hinzugefügt wird
+
+// Funktion, um den Titel schrittweise zu ergänzen
+function animateTitle() {
+    if (titleIndex <= fullTitle.length) {
+        currentTitle = fullTitle.slice(0, titleIndex);
+        document.title ="AniHome ● " + currentTitle;
+        titleIndex++;
+        setTimeout(animateTitle, 300); // Warte 200 Millisekunden, bevor der nächste Buchstabe hinzugefügt wird
+    }
+}
+
+// Starte die Animation, sobald die Seite geladen ist
+window.addEventListener('load', animateTitle);
 
 const anime = document.getElementById('anime');
 const animenative = document.getElementById('animenative');

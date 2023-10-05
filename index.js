@@ -1,4 +1,4 @@
-//window.history.replaceState({}, document.title, '/');
+window.history.replaceState({}, document.title, '/');
 document.getElementById("info").style.visibility = 'hidden'
 var spr = navigator.language
 if (!spr === 'de-DE') {
@@ -18,6 +18,23 @@ document.getElementById("okbtn").addEventListener('click', () =>{
 window.addEventListener("resize", (event) => {
    sic();
 });
+
+const fullTitle = "Home"; // Der vollständige Titel
+let currentTitle = "AniHome ●"; // Der aktuelle Titel, der sich schrittweise ergänzt
+let titleIndex = 0; // Der Index des nächsten Buchstabens, der hinzugefügt wird
+
+// Funktion, um den Titel schrittweise zu ergänzen
+function animateTitle() {
+    if (titleIndex <= fullTitle.length) {
+        currentTitle = fullTitle.slice(0, titleIndex);
+        document.title ="AniHome ● " + currentTitle;
+        titleIndex++;
+        setTimeout(animateTitle, 300); // Warte 200 Millisekunden, bevor der nächste Buchstabe hinzugefügt wird
+    }
+}
+
+// Starte die Animation, sobald die Seite geladen ist
+window.addEventListener('load', animateTitle);
 
 function en() {
     document.getElementById("headertext").innerHTML = "Your AniPicture Library";

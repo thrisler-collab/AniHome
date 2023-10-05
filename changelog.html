@@ -6,80 +6,63 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="shortcut icon" href="src/icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/scrollbar.css">
+  <link rel="stylesheet" href="css/changelog.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>AniHome ● Home</title>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-black">
 
   <div class="container-fluid">
-    <!-- Links -->
-    <ul class="navbar-nav" >
+    <ul class="navbar-nav">
       <li class="nav-item">
         <img src="src/icon.ico" width="40" height="40" alt="Icon">
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="index.html">Home</a>
+        <a class="nav-link text-white active" href="index.html">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white active" href="neko.html">Neko</a>
+        <a class="nav-link text-white" href="neko.html">Neko</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="catboy.html">AniList</a>
+        <a class="nav-link text-white" href="catboy.html">CatBoy</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white d-flex" href="anisearch.html">AniFind <p class="nav-link text-white beta">BETA</p></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white d-flex" href="">Pokèmon <p class="nav-link text-white beta">Coming Soon</p></a>
+        <a class="nav-link text-white d-flex" href="anisearch.html">AniSearch <p
+                class="nav-link text-white beta">BETA</p></a>
       </li>
     </ul>
   </div>
 
+  <div>
+    <img src="src/bg1.jpg" id="backgr">
+  </div>
+
 </nav>
-
-<div>
-   <img src="src/bg4.png" id="backgr">
-</div>
-
 <header class="text-center bg-danger pt-3 rounded-3 container mt-5 pb-2">
   <h1 class="text-white">AniHome</h1>
-  <p class="text-white" id="30">Die AniPicture Library</p>
+  <p class="text-white" id="headertext">Die AniPicture Library</p>
 </header>
 
-<div class="text-white text-center">
-  <img src="src/cat.gif" width="80" height="80" alt="cat">
-  <h3>Neko.best</h3>
+<h1 class="text-center justify-content-center mt-4">Neuigkeiten </h1>
+
+<div class="w-50  al container">
+   <h3 class="pt-2">Update 1.1 - [DATUM]</h3>
+   <p  class="c"> Das erste große Update für AniHome mit vielen neuen Features :3</p>
+  <hr>
+  <ul>
+    <li> <strong>AniSearch:</strong> Mit dieser neuen Funktion lassen sich bilder hochladen und anzeigen asu welchen anime er kommt und welche Episode (derzeit in Beta!)</li>
+    <li> <strong>Verbesserte UI:</strong> Wir haben einige Änderungen an der UI vorgenommen</li>
+    <li> <strong>AniHome App:</strong> Nun bieten wir auch eine eigene (PWA) App für Handys und PCs an</li>
+    <li><strong>CatBoy:</strong> Wir haben nun hinzugefügt das sich nun auch GIFs anzeigen lassen können ^^</li>
+    <li><strong>BugFix:</strong> Wir haben den Fehler behoben das die Ansicht auf Handys und Tablets fehlerhaft angezeigt wurden.</li>
+  </ul>
+
+  <p class="c">Wir hoffen das euch das Update gefällt :3 In Zukunft werden wir weiterhin neue Updates veröffentlichen ^^</p>
+  <br>
+  <p class="c pb-2">- AniHome DEV Team</p>
 </div>
 
-<div class="bg-dark rounded-3 w-25 f text-white text-center mt-5">
-  <h4 class="p-4" id="31">Wähle deine Kategorie</h4>
-  <select class="gray text-white rounded-2 sel form-select ms-5 w-75" id="select-categorie">
-    <option id="32">Auswahl</option>
-    <option>husbando</option>
-    <option>kitsune</option>
-    <option>neko</option>
-    <option>waifu</option>
-  </select>
-  <br>
-  <button class="mt-4 mb-4" id="send">
-    Bestätigen
-  </button>
-  <br>
-  <img src="src/loading.gif" id="loading" class="text-center justify-content-center mb-4" width="30" height="30">
-</div>
-
-<div class="card text-center ca mt-5 text-white">
-  <div class="card-header bg-dark">Artist: <a target="_blank" id="head" href=""></a></div>
-  <div class="card-body gray"><img src="src/default.png" width="70%" id="imgresults"></div>
-  <div class="card-footer bg-dark">
-    <a id="download" download href="src/default.png">
-      <button id="dlbtn" >
-        Download
-      </button>
-    </a>
-  </div>
-</div>
 
 <footer class="w-100 bg-black ft tt mt-5">
   <div class="row text-white bg-black rounded-2 w-100">
@@ -104,7 +87,7 @@
           </tr>
           <tr class="text-center">
             <td><img src="src/cat.png" width="15" height="15"></td>
-            <td>Jikan API</td>
+            <td>CatBoy API</td>
           </tr>
           <tr class="text-center">
             <td><img src="src/tmapi.png" width="15" height="15"></td>
@@ -130,7 +113,8 @@
   </div>
 </footer>
 
-<script src="js/neko.js"></script>
+<script src="index.js"></script>
+<script src="https://kit.fontawesome.com/4021e89746.js" crossorigin="anonymous"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
