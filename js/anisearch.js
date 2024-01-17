@@ -1,4 +1,4 @@
-window.history.replaceState({}, document.title, '/');
+//window.history.replaceState({}, document.title, '/');
 var spr = navigator.language
 if (!spr === 'de-DE') {
     en()

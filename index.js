@@ -1,4 +1,4 @@
-window.history.replaceState({}, document.title, '/');
+//window.history.replaceState({}, document.title, '/');
 document.getElementById("info").style.visibility = 'hidden'
 var spr = navigator.language
 if (!spr === 'de-DE') {
